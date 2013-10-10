@@ -1,0 +1,67 @@
+<!--/////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) Autodesk, Inc. All rights reserved 
+// Written by Philippe Leefsma 2013 - ADN/Developer Technical Services
+//
+// Permission to use, copy, modify, and distribute this software in
+// object code form for any purpose and without fee is hereby granted, 
+// provided that the above copyright notice appears in all copies and 
+// that both that copyright notice and the limited warranty and
+// restricted rights notice below appear in all supporting 
+// documentation.
+//
+// AUTODESK PROVIDES THIS PROGRAM "AS IS" AND WITH ALL FAULTS. 
+// AUTODESK SPECIFICALLY DISCLAIMS ANY IMPLIED WARRANTY OF
+// MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE.  AUTODESK, INC. 
+// DOES NOT WARRANT THAT THE OPERATION OF THE PROGRAM WILL BE
+// UNINTERRUPTED OR ERROR FREE.
+/////////////////////////////////////////////////////////////////////////////////-->
+<html>
+
+<head>
+	<title>ADN Node.js Server Demo</title>
+	<link rel="stylesheet" type="text/css" href="client.css" />
+	<script type="text/javascript" src="socket.io/socket.io.js" ></script>
+	<script type="text/javascript" src="jquery-1.10.1.min.js" ></script>
+	<script type="text/javascript" src="client.js"></script>
+</head>
+
+<body>
+
+    <h2>ADN Node.js Demo</h2>
+
+    <hr/>
+    Cloud Models:
+    <br/>
+    <br/>
+
+    <select id="comboModels">
+    </select>
+
+    <input type='button' value='Get Model Data' id='btnGetData'/>
+
+    <hr/>
+    <br/>
+
+    <div id="resultText"></div> 
+
+    <br/>
+    <div id="tableDiv">       
+        <table id="propsTable" border="2" cellpadding="2" cellspacing="2" width="50%" style="visibility: hidden">
+        </table> 
+    </div> 
+
+    <br/>
+    <br/>
+    <img id="thumbnail" height="400" width="400" style="visibility: hidden"> 
+
+    <div id="loading-div-background">
+        <div class="ui-corner-all" id="loading-div">
+        <img alt="Pending.." src="./resources/loading.gif" style="height: 30px; margin: 30px;" /> 
+        <br />
+        <h2 style="color: black; font-weight: bold ;">
+            Retrieving Properties....
+        </h2>
+        </div>
+    </div>
+</body>
+</html>
